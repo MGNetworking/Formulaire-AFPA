@@ -1,0 +1,80 @@
+:root {
+    --page-background: #d8d8d8;
+    --form-background: #FFF;
+    --dark-grey: #2e2e2e;
+    --title-color: rgba(255, 0, 0, 0.863);
+    --default-space: 20px;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    /*inclure dans les boites margin padding bordure*/
+    box-sizing: inherit;
+}
+
+body {
+    background: var(--page-background);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+}
+
+h1 {
+    display: flex;
+    color: var(--title-color);
+    margin: 20px;
+    justify-content: space-between;
+}
+
+h1>span {
+    color: green;
+    width: min-content;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+form fieldset {
+    border: 1px solid var(--dark-grey);
+    border-radius: 5px;
+    background: var(--form-background);
+    margin: 0 10px;
+    margin-bottom: 20px;
+}
+
+form fieldset legend {
+    background: var(--form-background);
+    border: 1px solid var(--dark-grey);
+    border-radius: 5px;
+    color: var(--title-color);
+    padding: 2px 10px;
+}
+
+form select {
+    appearance: none;
+    border: 1px solid var(--dark-grey);
+    border-radius: 5px;
+}
+
+form input {
+    padding: 5px;
+    width: 100%;
+    border: 1px solid var(--dark-grey);
+    border-radius: 5px;
+}
+
+form input[type=radio] {
+    width: auto;
+    margin-right: 5px;
+}
+
+.signature {
+    display: flex;
+    border: 1px solid var(--dark-grey);
+    width: 100%;
+    height: 150px;
+}
