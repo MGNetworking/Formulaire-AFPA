@@ -1,0 +1,131 @@
+[
+  {
+    "code_06": [
+      {
+        "texte_option": "--  Absence Légale --"
+      },
+      {
+        "value": "code_06_1",
+        "texte": "Naissance ou adoption (3 jours)"
+      },
+      {
+        "value": "code_06_2",
+        "texte": "Mariage (4 jour)"
+      },
+      {
+        "value": "code_06_3",
+        "texte": "Mariage d’un enfant (1 jour)"
+      },
+      {
+        "value": "code_06_4",
+        "texte": "Décès conjoint / partenaire"
+      },
+      {
+        "value": "code_06_5",
+        "texte": "Décès d'un d’un enfant (2 jours)"
+      },
+      {
+        "value": "code_06_6",
+        "texte": "Visite médicale obligatoire de la grossesse"
+      },
+      {
+        "value": "code_06_7",
+        "texte": "Stagiaire membre du CA d’une caisse de SCC"
+      }
+    ]
+  },
+  {
+    "code_accident": [
+      {
+        "texte_option": "-- accident --"
+      },
+      {
+        "value": "code_accident_20",
+        "texte": "de travail sans arrêt"
+      },
+      {
+        "value": "code_accident_21",
+        "texte": "de travail avec arrêt"
+      },
+      {
+        "value": "code_accident_30",
+        "texte": "de trajet sans arrêt"
+      },
+      {
+        "value": "code_accident_31",
+        "texte": "de trajet avec arrêt"
+      },
+      {
+        "value": "code_accident_40",
+        "texte": "de travail hors Afpa sans arrêt"
+      },
+      {
+        "value": "code_accident_41",
+        "texte": "de travail hors Afpa avec arrêt"
+      }
+    ]
+  },
+  {
+    "code_98": [
+      {
+        "texte_option": "-- <em>Absence</em> autorisée <em>non rémunérée</em> --"
+      },
+      {
+        "value": "code_98_1",
+        "texte": "Recherche PE"
+      },
+      {
+        "value": "code_98_2",
+        "texte": "Recherche d’un emploi"
+      },
+      {
+        "value": "code_98_3",
+        "texte": "Enquête en entreprise"
+      },
+      {
+        "value": "code_98_4",
+        "texte": "Visite d’un autre centre"
+      },
+      {
+        "value": "code_98_5",
+        "texte": "Visite d’un salon"
+      },
+      {
+        "value": "code_98_6",
+        "texte": "RDV psychologue du travail"
+      },
+      {
+        "value": "code_98_7",
+        "texte": "Rendez-vous POLE EMPLOI"
+      },
+      {
+        "value": "code_98_8",
+        "texte": "fêtes religieuses hors jours fériés"
+      },
+      {
+        "value": "code_98_9",
+        "texte": "Grève des transports"
+      },
+      {
+        "value": "code_98_10",
+        "texte": "Intempéries"
+      },
+      {
+        "value": "code_98_11",
+        "texte": "Rdv avec le conseiller militaire"
+      },
+      {
+        "value": "code_98_12",
+        "texte": "Convocation au tribunal ou commissariat"
+      },
+      {
+        "value": "code_98_13",
+        "texte": "Recherche de logement"
+      },
+      {
+        "value": "code_98_14",
+        "texte": "Rdv organismes divers"
+      }
+    ]
+  }
+]
