@@ -1,16 +1,3 @@
-// recupération des valeurs du formulaire
-const identity = document.querySelectorAll('.identification input[type=text]')
-console.log(identity)
-
-const duration = document.querySelectorAll('.dates input[type=radio]')
-console.log(duration)
-
-const date = document.querySelectorAll('.dates input[type=date]')
-console.log(date)
-
-const time = document.querySelectorAll('.subforms input[type=number]')
-console.log(time)
-
 /**
  * Évenement :
  * Création de la parti motif dés le chargement de la page
@@ -23,10 +10,11 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 
-/*********** parti injection de valeur dans le formulaire */
+
 /**
- * Cette focntion a pour but de créé les arborescences complet des trois
- * comboBox du formulaire
+ * Parti injection de valeur dans le formulaire.
+ * Cette fonction a pour but de créé les arborescences complet des trois
+ * comboBox du formulaire.
  *
  * @param fichier
  */
@@ -47,31 +35,33 @@ function construction(fichier) {
         }).then(function (fichierJson) {
 
 
-        //*********************************** creation du node code_06
+        //********************************************************************* creation du node code_06
 
         let nodeCode_06 = new Array(fichierJson[0].code_06.length)
         let selectNodeCode_06 = document.createElement('select')
 
-        // ajout de l'entete de l'option
+        // ajout de l'entête de l'option
         nodeCode_06[0] = document.createElement('option')
         nodeCode_06[0].innerHTML = fichierJson[0].code_06[0].texte_option
         selectNodeCode_06.appendChild(nodeCode_06[0])
 
-        // ajout des les options avec valeur
+        // ajout des options avec valeur est text
         for(let i = 1 ; i < nodeCode_06.length ; i++){
 
             nodeCode_06[i] = document.createElement('option')
             nodeCode_06[i].value = fichierJson[0].code_06[i].value
             nodeCode_06[i].innerHTML = fichierJson[0].code_06[i].texte
 
+            // ajout l'option au select
             selectNodeCode_06.appendChild(nodeCode_06[i])
         }
 
+        // recupération du node pour l'insertion dans HTML existant
+        const element = document.getElementById('insert_code06')
+        // insertion de l'element selectNodeCode_06
+        element.insertAdjacentElement('afterend',selectNodeCode_06)
 
-        console.log(selectNodeCode_06)
-
-
-        //************************************ creation du node code accident
+        //**************************************************************** creation du node code accident
 
         let nodeCode_accident = new Array(fichierJson[1].code_accident.length)
         let selectNodeAccident = document.createElement('select')
@@ -90,9 +80,11 @@ function construction(fichier) {
 
             selectNodeAccident.appendChild(nodeCode_accident[i])
         }
-        console.log(selectNodeAccident)
 
-        //*********************************************code 98
+        const elNode_Accident = document.getElementById('insert_code_accidente')
+        elNode_Accident.insertAdjacentElement('afterend',selectNodeAccident)
+
+        //************************************************************************************ code 98
 
         let selectNodeCode_98= document.createElement('select')
 
@@ -113,7 +105,8 @@ function construction(fichier) {
             selectNodeCode_98.appendChild(nodeCode_98[i])
         }
 
-        console.log(selectNodeCode_98)
+        const elNodeCode98 = document.getElementById('insert_code_98')
+        elNodeCode98.insertAdjacentElement('afterend', selectNodeCode_98)
 
     })
 
