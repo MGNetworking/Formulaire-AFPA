@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Demande d'autorisation d'absence</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap">
+    <link rel="stylesheet" href="/src/css/src_styles_template.css"/>
+    <link rel="stylesheet" href="/src/css/src_styles_form.css"/>
+    <link rel="shortcut icon" type="image/png" href="/src/image/favicon.ico"/>
+
+</head>
+
+<body>
+<main>
+    <div id="page-1">
+        <header>
+            <h1>Autorisation d'Absence</h1>
+            <img class="logo"
+                 src="/src/image/afpa_logo.png"
+                 alt="Logo AFPA">
+        </header>
+
+        <div class="container">
+            <section id="identification">
+                <form action="#">
+                    <div class="name">
+                        <label for="name">Nom</label>
+                        <input type="text" name="nom" disabled="disabled"/>
+
+                        <label for="prenom">Prénom</label>
+                        <input type="text" name="prenom" disabled="disabled" />
+                    </div>
+
+                    <label for="formation_suivie">Formation suivie</label>
+                    <input type="text" name="formation_suivie" disabled="disabled"/>
+                </form>
+            </section>
+
+            <section id="dates">
+
+                <h2>Demande l'autorisation de s'absenter du centre</h2>
+
+                    <fieldset class="info_date">
+
+                        <legend>Prévut pour la date suivant</legend>
+
+                        <div>
+                            <label for="delai_1">Date et heurs debut</label>
+                            <input type="datetime-local" name="delai_1" id="delai_1" disabled="disabled">
+                        </div>
+                        <div>
+                            <label for="delai_2">Date et heurs fin</label>
+                            <input type="datetime-local" name="delai_2" id="delai_2" disabled="disabled">
+                        </div>
+                        <div>
+                            <label for="nbjour">Nombre de jours complet</label>
+                            <input type="number" name="nbjour" id="nbjour" disabled="disabled">
+                        </div>
+
+
+                    </fieldset>
+
+
+            </section>
+
+            <section id="motive">
+                <h2>Motif de l'absence</h2>
+                <p id="motif"></p>
+                <div id="motive-container"></div>
+            </section>
+
+            <section id="company-stamp">
+                <p class="placeholder">
+                    Cachet et signature de l'entreprise ou de
+                </p>
+                <p class="placeholder">
+                    Merci d'apposer votre cachet pour justifier de l'absence de formation de M
+                </p>
+            </section>
+
+            <section id="signatures">
+                <div class="trainee-signature">
+                    <p class="placeholder">
+                        Date et signature du stagiaire
+                    </p>
+                </div>
+
+                <div class="trainer-signature">
+                    <p class="placeholder">
+                        Date et signature du formateur
+                    </p>
+                </div>
+            </section>
+
+            <section id="endorsement">
+                <div>
+                    <p class="placeholder">Avis du MF pour décision du Directeur</p>
+                </div>
+                <div>
+                    <p class="placeholder">Décision du Directeur</p>
+                </div>
+            </section>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <button type="click" id="print-button">Imprimer<br/>le document</button>
+</footer>
+
+
+<script src="../js/insertvalider.js"></script>
+</body>
+</html>

@@ -9,8 +9,9 @@
 
     <link rel="stylesheet" href="/src/css/normalize.css" type="text/css">
     <link rel="stylesheet" href="/src/css/style.css" type="text/css">
+    <link rel="shortcut icon" type="image/png" href="/src/image/favicon.ico"/>
 
-    <script src="/src/js/motif-element.js"></script>
+
 </head>
 
 <body>
@@ -19,7 +20,7 @@
 
         <h1>Autorisation d'absence<span>AFPA</span></h1>
 
-        <form action="" method="post" id="form-information">
+        <form id="form-information" action="src_template.html" method="get" novalidate>
 
 
             <fieldset class="info_perso">
@@ -28,15 +29,15 @@
 
                 <div>
                     <label for="nom">nom </label>
-                    <input type="text" name="nom" id="nom" required autofocus>
+                    <input type="text" name="nom" id="nom" required autofocus tabindex="1">
                 </div>
                 <div>
                     <label for="prenom">prenom</label>
-                    <input type="text" name="prenom" id="prenom" required>
+                    <input type="text" name="prenom" id="prenom" required tabindex="2">
                 </div>
                 <div>
                     <label for="formation_suivie">formation suivie</label>
-                    <input type="text" name="formation_suivie" id="formation_suivie">
+                    <input type="text" name="formation_suivie" id="formation_suivie" required tabindex="3">
                 </div>
 
             </fieldset>
@@ -47,15 +48,15 @@
 
                 <div>
                     <label for="delai_1">Date et heurs debut</label>
-                    <input type="datetime-local" name="delai_1" id="delai_1" required>
+                    <input type="datetime-local" name="delai_1" id="delai_1" required tabindex="4">
                 </div>
                 <div>
                     <label for="delai_2">Date et heurs fin</label>
-                    <input type="datetime-local" name="delai_2" id="delai_2" required>
+                    <input type="datetime-local" name="delai_2" id="delai_2" required tabindex="5">
                 </div>
                 <div>
                     <label for="nbjour">Nombre de jours complet</label>
-                    <input type="number" name="nbjour" id="nbjour" required>
+                    <input type="number" name="nbjour" id="nbjour" required tabindex="6">
                 </div>
 
 
@@ -64,65 +65,37 @@
             <fieldset>
 
                 <legend>Motif de l'absence</legend>
-
+                <span id="Msg-motif"></span>
                 <div>
-                    <label><input type="radio" name="code_01">Code 01 : <span>Retard <em>absence non rémunéré</em> </span></label>
+                    <label>
+                        <input type="radio" name="code_radio" value="code_01">Code 01 : <span>Retard <em>absence non rémunéré</em> </span>
+                    </label>
                 </div>
 
                 <div>
-                    <label for='code_04'><input type="radio" name="code_04">Code 04 : Grève Afpa</label>
+                    <label for='code_04'>
+                        <input type="radio" name="code_radio" value="code_04" >Code 04 : Grève Afpa
+                    </label>
                 </div>
 
                 <div>
-                    <label for='code_05'><input type="radio" name="code_05">Code 05 : Maladie</label>
+                    <label for='code_05'>
+                        <input type="radio" name="code_radio" value="code_05">Code 05 : Maladie
+                    </label>
                 </div>
 
                 <label id="insert_code06" for="code_06">Code 06 :</label>
-<!--                <select name="code_06" id="code_06">
-                    <option >&#45;&#45;  Absence Légale &#45;&#45;</option>
-                    <option value="code_06_1">Naissance ou adoption (3 jours)</option>
-                    <option value="code_06_2">Mariage (4 jour)</option>
-                    <option value="code_06_3">Mariage d’un enfant (1 jour)</option>
-                    <option value="code_06_4">Décès conjoint / partenaire </option>
-                    <option value="code_06_5">Décès d'un d’un enfant (2 jours)</option>
-                    <option value="code_06_6">Visite médicale obligatoire de la grossesse</option>
-                    <option value="code_06_7">Stagiaire membre du CA d’une caisse de SCC </option>
-                </select>-->
+                <!-- element code 06 -->
 
                 <div >
                     <label id="insert_code_accidente" for="code_accident">Code 20 – 21 – 30 – 31 - 40 - 41 :</label>
-<!--                    <select name="code_accident" id="code_accident">
-                        <option >&#45;&#45; accident &#45;&#45;</option>
-                        <option value="code_accident_1">de travail sans arrêt</option>
-                        <option value="code_accident_2">de travail avec arrêt</option>
-                        <option value="code_accident_3">de trajet sans arrêt</option>
-                        <option value="code_accident_4">de trajet avec arrêt</option>
-                        <option value="code_accident_5">de travail hors Afpa sans arrêt</option>
-                        <option value="code_accident_6">de travail hors Afpa avec arrêt</option>
-                    </select>-->
+                <!-- element code accident-->
                 </div>
 
                 <div>
                     <label id="insert_code_98" for="code_98"><span>Code 98 :</span></label>
-                    <!--       <select name="code_98" id="code_98">
-
-                               <option>&#45;&#45; <em>Absence</em> autorisée <em>non rémunérée</em> &#45;&#45;</option>
-                               <option value="code_98_1">Recherche PE</option>
-                               <option value="code_98_2">Recherche d’un emploi</option>
-                               <option value="code_98_3">Enquête en entreprise</option>
-                               <option value="code_98_4">Visite d’un autre centre</option>
-                               <option value="code_98_5">Visite d’un salon</option>
-                               <option value="code_98_6">RDV psychologue du travail</option>
-                               <option value="code_98_7">Rendez-vous POLE EMPLOI</option>
-                               <option value="code_98_8">fêtes religieuses hors jours fériés</option>
-                               <option value="code_98_9">Grève des transports</option>
-                               <option value="code_98_10">Intempéries</option>
-                               <option value="code_98_11">Rdv avec le conseiller militaire</option>
-                               <option value="code_98_12">Convocation au tribunal ou commissariat</option>
-                               <option value="code_98_13">Recherche de logement</option>
-                               <option value="code_98_14">Rdv organismes divers</option>
-                           </select>-->
                     <p>Code 99 <span><em>: Absence non autorisée non rémunérée</em></span></p>
+                    <!-- element code 98 -->
                 </div>
 
             </fieldset>
@@ -137,30 +110,18 @@
     <aside class="element_singature">
 
         <p class="signature">Cachet et signature de l’entreprise ou de</p>
-
         <p class="signature">Merci d’apposer votre cachet pour justifier de l’absence de la formation de M</p>
-
-        <p class="signature">>Date et signature du stagiaire</p>
-
+        <p class="signature">Date et signature du stagiaire</p>
         <p class="signature">Date et signature du formateur</p>
-
         <p class="signature">Avis du MF pour décision du Directeur</p>
-
         <p class="signature">Décision du Directeur</p>
 
     </aside>
 
 
-
+    <script src="/src/js/motif-element.js"></script>
+    <script src="/src/js/validation-formulaire.js"></script>
 </body>
-
-<!-- script browser sync -->
-<!--<script id="__bs_script__">
-    //<![CDATA[
-    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
-    //]]>
-</script>-->
-
 <footer>
     <p>AN02-PCS C6 Version 05 <span>Date d’application : 01/04/17</span></p>
     <p><strong>Agence nationale pour la formation professionnelle des adultes</strong></p>
